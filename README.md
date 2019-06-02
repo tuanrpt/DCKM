@@ -8,7 +8,7 @@ The overall structure of DCKM model consists of 3 primary elements: an embedding
 
 ## Instructions
 ### Datasets
-Statistics of two binary datasets
+**The statistics of two binary datasets**
 <table>
   <tr align="center">
     <th></th>
@@ -56,3 +56,4 @@ Statistics of two binary datasets
     <td>52,899</td>
   </tr>
 </table>
+
