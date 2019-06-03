@@ -65,8 +65,8 @@ Each dataset folder contains two files: binaries-x-y.data (including functions c
 Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y is windows or ubuntu).
 
 **An example of content of binary files**
-> **Note:** You can find more information about **LaTeX** mathematical expressions [here][4].
-```
+> **Note:** We use the special charactor'|' to distinguish *opcodes* from *instruction information*, and functions are separated by '-----'.   
+```text
 85|85
 137|137,229
 104|104,0,0,0,0
@@ -82,10 +82,12 @@ Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y
 -----
 85|85
 137|137,229
-131|131,236,16>
+131|131,236,16
 ```
 
 **An example of content of label files**
+> **Note:** label '0' and '1' represents for a non-vulnerable and vulnerable function respectively.
+
 ```
 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 ```
