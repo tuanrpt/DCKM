@@ -6,7 +6,7 @@ DCKM model is a combination of a number of diverse techniques, including deep le
 
 The overall structure of DCKM model consists of 3 primary elements: an embedding layer for vectorizing machine instructions, a Bidirectional Recurrent Neural Network capable of taking into account temporal information from a sequence of machine instructions, and a novel Cost-sensitive Kernel Machine invoked in the random feature space to predict the vulnerability with minimal cost-sensitive loss.
 
-The model is trained on two binary datasets, one of them is a new dataset whose source code was collected from six real-world open-source projects.
+The model is trained on two binary datasets, **NDSS18** and **6 open-source** which is a new real-world binary dataset whose source code was collected from six open-source projects.
 
 ## Instructions
 ### Datasets
