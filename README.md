@@ -112,6 +112,6 @@ Please kindly look at the initial function of the *DCKM class* (in main.py) for 
 - num_random_features: the dimension for mapping *machine instruction* representations to random feature space.
 
 ### Model test
-To test saved DCKM model, set the *running_mode* parameter to 0, and rerun the main.py
+To test saved DCKM model, set the *running_mode* parameter to '0', and rerun the *main.py*
 
 
