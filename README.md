@@ -102,11 +102,16 @@ Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y
 ### Model training and evaluation
 Command to run:
 ```
-python DCKM_main.py
+python main.py
 ```
 
 Model parameters: 
-All paprameters are declared in the initial function of the **DCKM class**. Some of them are important to obtain promising results after 100 epoches: 
-- embedding_dimension: the dimension of the embedding process
+All paprameters are declared in the initial function of the **DCKM class** (in main.py). Some of them are important to obtain promising results after 100 epoches: 
+- embedding_dimension: the dimension of the embedding process.
 - hidden_size: the nunmber of hidden units of the Bidirectional RNN.
 - num_random_features: the dimension for mapping *machine instruction* representations to random feature space.
+
+### Model test
+To test DCKM model, set the *running_mode* parameter to 0, and rerun the main.py
+
+
