@@ -8,9 +8,8 @@ The overall structure of DCKM model consists of 3 primary elements: an embedding
 
 The model is trained on two binary datasets, **NDSS18** and **6 open-source** which is a new real-world binary dataset whose source code was collected from six open-source projects.
 
-## Instructions
-### Datasets
-**The statistics of two binary datasets**
+## Datasets
+### The statistics of two binary datasets
 <table>
   <tr align="center">
     <th></th>
@@ -59,12 +58,12 @@ The model is trained on two binary datasets, **NDSS18** and **6 open-source** wh
   </tr>
 </table>
 
-**Data format**
+### Data format
 
 Each dataset folder contains two files: binaries-x-y.data (including functions compiled into binaries under two platforms, Windows and
 Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y is windows or ubuntu).
 
-**An example of content of binary files**
+### An example of content of binary files
 > **Note:** We use the special charactor '|' to distinguish *opcodes* from *instruction information*. For example, '131|131,196,8' has an opcode '131' and instruction information '131,196,8'. Additionally, the functions are separated by '-----'.   
 ```
 ...
@@ -88,7 +87,7 @@ Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y
 ...
 ```
 
-**An example of content of label files**
+### An example of content of label files
 > **Note:** label '0' and '1' represents for a non-vulnerable and vulnerable function respectively.
 
 ```
