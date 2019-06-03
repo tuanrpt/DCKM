@@ -9,7 +9,7 @@ The overall structure of DCKM model consists of 3 primary elements: an embedding
 The model is trained on two binary datasets, **NDSS18** and **6 open-source** which is a new real-world binary dataset whose source code was collected from six open-source projects.
 
 ## Datasets
-### The statistics of two binary datasets
+### The statistics of the two binary datasets
 <table>
   <tr align="center">
     <th></th>
@@ -106,7 +106,8 @@ python main.py
 ```
 
 Model parameters: 
-Please kindly look at the initial function of the *DCKM class* (in the main.py) for hyperparameter settings. Some parameters are crucial to obtain promising results after 100 epoches: 
+Please kindly look at the initial function of the *DCKM class* (in the main.py) for hyperparameter settings. 
+Some parameters are crucial to obtain promising results after 100 epoches: 
 - embedding_dimension: the dimension of the embedding process.
 - hidden_size: the nunmber of hidden units of the Bidirectional RNN.
 - num_random_features: the dimension for mapping *machine instruction* representations to random feature space.
