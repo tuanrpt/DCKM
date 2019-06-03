@@ -88,7 +88,7 @@ Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y
 ```
 
 ### An example of content of label files
-> **Note:** label '0' and '1' represents for a non-vulnerable and vulnerable function respectively.
+> **Note:** label '0' and '1' represent for a non-vulnerable and vulnerable function respectively.
 
 ```
 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -105,4 +105,8 @@ Command to run:
 python DCKM_main.py
 ```
 
-Arguments: all paprameters are declared in the __init__ function of the **DCKM** class
+Model parameters: 
+All paprameters are declared in the initial function of the **DCKM class**. Some of them are important to obtain promising results after 100 epoches: 
+- embedding_dimension: the dimension of the embedding process
+- hidden_size: the nunmber of hidden units of the Bidirectional RNN.
+- num_random_features: the dimension for mapping *machine instruction* representations to random feature space.
