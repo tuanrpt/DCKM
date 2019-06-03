@@ -58,7 +58,7 @@ The model is trained on two binary datasets, **NDSS18** and **6 open-source** wh
   </tr>
 </table>
 
-### Data usage
+### Data format
 
 Each dataset folder contains two files: binaries-x-y.data (including functions compiled into binaries under two platforms, Windows and
 Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y is windows or ubuntu).
