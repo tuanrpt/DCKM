@@ -58,7 +58,7 @@ The model is trained on two binary datasets, **NDSS18** and **6 open-source** wh
   </tr>
 </table>
 
-### Data format
+### Data usage
 
 Each dataset folder contains two files: binaries-x-y.data (including functions compiled into binaries under two platforms, Windows and
 Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y is windows or ubuntu).
@@ -106,12 +106,12 @@ python main.py
 ```
 
 Model parameters: 
-All paprameters are declared in the initial function of the **DCKM class** (in main.py). Some of them are important to obtain promising results after 100 epoches: 
+Please kindly look at the initial function of the *DCKM class* (in main.py) for hyperparameter settings. Some parameters are crucial to obtain promising results after 100 epoches: 
 - embedding_dimension: the dimension of the embedding process.
 - hidden_size: the nunmber of hidden units of the Bidirectional RNN.
 - num_random_features: the dimension for mapping *machine instruction* representations to random feature space.
 
 ### Model test
-To test DCKM model, set the *running_mode* parameter to 0, and rerun the main.py
+To test saved DCKM model, set the *running_mode* parameter to 0, and rerun the main.py
 
 
