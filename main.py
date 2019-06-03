@@ -2,7 +2,7 @@ import os
 import tensorflow as tf
 import time
 import sys
-import DCKM_utils as utils
+import utils
 import numpy as np
 from sklearn import metrics as mt
 
@@ -10,10 +10,10 @@ from sklearn import metrics as mt
 class DCKM:
     def __init__(self):
         # Initial settings
+        self.running_mode = 1  # 0: test, 1: train
+
         self.dataset_name = '6_projects'  # 6_projects' or 'NDSS18'
         self.data_size = 'full_dataset'  # 'windows_only' or 'ubuntu_only' or 'full_dataset'
-
-        self.running_mode = 0  # 0: test, 1: train
 
         self.datetime = utils._DATETIME
         tf.set_random_seed(utils._RANDOM_SEED)
@@ -31,10 +31,10 @@ class DCKM:
 
         # Embeddings
         self.vocab_assembly_size = 256
-        self.num_input = 100  # 6_projects: 100, NDSS18: 64
+        self.embedding_dimension = 100  # 6_projects: 100, NDSS18: 64
 
         # Bidirectional RNN
-        self.num_hidden = 128  # 6_projects: 128, NDSS18: 256
+        self.hidden_size = 128  # 6_projects: 128, NDSS18: 256
 
         # Kernel Machine
         self.num_random_features = 512
@@ -53,20 +53,20 @@ class DCKM:
 
     def _create_embedding(self):
         with tf.name_scope("embedding"):
-            self.w_opcode = tf.Variable(tf.truncated_normal([self.vocab_opcode_size, self.num_input], stddev=0.05),
+            self.w_opcode = tf.Variable(tf.truncated_normal([self.vocab_opcode_size, self.embedding_dimension], stddev=0.05),
                                         name='w_opcode')
 
-            self.w_assembly = tf.Variable(tf.truncated_normal([self.vocab_assembly_size, self.num_input], stddev=0.05),
+            self.w_assembly = tf.Variable(tf.truncated_normal([self.vocab_assembly_size, self.embedding_dimension], stddev=0.05),
                                           name='w_assembly')
 
-            # (batch_size, time_steps, vocab_size) x (vocab_size, num_input) = (batch_size, time_steps, num_input)
+            # (batch_size, time_steps, vocab_size) x (vocab_size, embedding_dimension) = (batch_size, time_steps, embedding_dimension)
             self.embed_opcode = tf.tensordot(self.X_opcode, self.w_opcode, axes=((2,), (0,)))
             self.embed_assembly = tf.tensordot(self.X_assembly, self.w_assembly, axes=((2,), (0,)))
-            self.rnn_input = tf.concat([self.embed_opcode, self.embed_assembly], axis=2)  # (batch_size, time_steps, 2*num_input)
+            self.rnn_input = tf.concat([self.embed_opcode, self.embed_assembly], axis=2)  # (batch_size, time_steps, 2*embedding_dimension)
 
     def _create_bi_rnn(self):
         with tf.name_scope("bi-rnn"):
-            cell = tf.nn.rnn_cell.GRUCell(self.num_hidden)
+            cell = tf.nn.rnn_cell.GRUCell(self.hidden_size)
             self.outputs, self.states = tf.nn.bidirectional_dynamic_rnn(cell, cell, self.rnn_input, dtype=tf.float32,
                                                                         sequence_length=self.sequence_length)
             self.g_h_concatination = tf.concat([self.states[0], self.states[1]], 1)  # (batch_size, 2*self.num_hidden)

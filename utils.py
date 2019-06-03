@@ -21,7 +21,7 @@ def load_dataset(list_arch_os, dataset_name, make_it_imbalanced=True):
     Y_full = np.array([])
     data_folder = 'datasets'
     for arch_os in list_arch_os:
-        decimal_functions_path = data_folder + '/' + dataset_name + '/vocab2id_opcode-' + arch_os + '.data'
+        decimal_functions_path = data_folder + '/' + dataset_name + '/binaries-' + arch_os + '.data'
         label_path = data_folder + '/' + dataset_name + '/labels-' + arch_os + '.data'
         with open(decimal_functions_path, 'r') as f:
             X_lines = f.readlines()
