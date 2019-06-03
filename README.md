@@ -93,3 +93,16 @@ Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y
 ```
 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 ```
+
+## Model implementation
+### Environment preparation
+- Python >= 3.5
+- Tensorflow >= 1.12
+
+### Model training and evaluation
+Command to run:
+```
+python DCKM_main.py
+```
+
+Arguments: all paprameters are declared in the __init__ function of the **DCKM** class
