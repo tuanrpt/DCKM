@@ -100,15 +100,13 @@ Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y
 - Tensorflow >= 1.12
 
 ### Model training and evaluation
-Command to run:
+**Command to run:**
 ```
 python main.py
 ```
 
-Model parameters: 
-
+**Model parameters:**
 Please kindly look at the initial function of the *DCKM class* (in the main.py) for hyperparameter settings. 
-
 Some parameters are crucial to obtain promising results after 100 epoches: 
 - embedding_dimension: the dimension of the embedding process.
 - hidden_size: the nunmber of hidden units of the Bidirectional RNN.
