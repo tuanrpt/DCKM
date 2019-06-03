@@ -63,7 +63,7 @@ The model is trained on two binary datasets, **NDSS18** and **6 open-source** wh
 Each dataset folder contains two files: binaries-x-y.data (including functions compiled into binaries under two platforms, Windows and
 Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y is windows or ubuntu).
 
-### An example of content of binary files
+#### An example of content of binary files
 > **Note:** We use the special charactor '|' to distinguish *opcodes* from *instruction information*. For example, '131|131,196,8' has an opcode '131' and instruction information '131,196,8'. Additionally, the functions are separated by '-----'.   
 ```
 ...
@@ -87,7 +87,7 @@ Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y
 ...
 ```
 
-### An example of content of label files
+#### An example of content of label files
 > **Note:** label '0' and '1' represent for a non-vulnerable and vulnerable function respectively.
 
 ```
