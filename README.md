@@ -9,7 +9,7 @@ The overall structure of DCKM model consists of 3 primary elements: an embedding
 The model is trained on two binary datasets, **NDSS18** and **6 open-source** which is a new real-world binary dataset whose source code was collected from six open-source projects.
 
 ## Datasets
-### The statistics of two binary datasets
+### The statistics of the two binary datasets
 <table>
   <tr align="center">
     <th></th>
@@ -26,7 +26,7 @@ The model is trained on two binary datasets, **NDSS18** and **6 open-source** wh
     <td>17,977</td>
   </tr>
   <tr align="center">
-    <td><b>Ubuntu</b></td>
+    <td><b>Linux</b></td>
     <td>6,955</td>
     <td>7,349</td>
     <td>14,304</td>
@@ -45,7 +45,7 @@ The model is trained on two binary datasets, **NDSS18** and **6 open-source** wh
     <td>26,949</td>
   </tr>
   <tr align="center">
-    <td><b>Ubuntu</b></td>
+    <td><b>Linux</b></td>
     <td>25,660</td>
     <td>290</td>
     <td>25,950</td>
@@ -60,11 +60,12 @@ The model is trained on two binary datasets, **NDSS18** and **6 open-source** wh
 
 ### Data format
 
-Each dataset folder contains two files: binaries-x-y.data (including functions compiled into binaries under two platforms, Windows and
-Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y is windows or ubuntu).
+Each dataset folder contains two files: binaries-x-y.data (including functions compiled into binaries under two platforms (Windows/Linux), and architectures (x86/x64)), and their corresponding labels, labels-x-y.data (where x is '32' or '64', y is 'windows' or 'linux').
 
 #### An example of content of binary files
-> **Note:** We use the special charactor '|' to distinguish *opcodes* from *instruction information*. For example, '131|131,196,8' has an opcode '131' and instruction information '131,196,8'. Additionally, the functions are separated by '-----'.   
+> **Note:** 
+>- The *opcodes* and the *instruction information* of machine instructions (see the Section III-A of the paper) are converted from hexadecimal format to decimal format.
+>- We use the special charactor '|' to distinguish *opcodes* from *instruction information*. For example, '131|131,196,8' has an opcode '131' and instruction information '131,196,8'. Additionally, the functions are separated by '-----'.   
 ```
 ...
 -----
@@ -100,13 +101,14 @@ Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y
 - Tensorflow >= 1.12
 
 ### Model training and evaluation
-Command to run:
+**Command to run:**
 ```
 python main.py
 ```
 
-Model parameters: 
-Please kindly look at the initial function of the *DCKM class* (in the main.py) for hyperparameter settings. Some parameters are crucial to obtain promising results after 100 epoches: 
+**Model parameters:**
+Please kindly look at the initial function of the *DCKM class* (in the main.py) for hyperparameter settings. 
+Some parameters are crucial to obtain promising results after 100 epoches: 
 - embedding_dimension: the dimension of the embedding process.
 - hidden_size: the nunmber of hidden units of the Bidirectional RNN.
 - num_random_features: the dimension for mapping *machine instruction* representations to random feature space.
