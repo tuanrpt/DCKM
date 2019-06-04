@@ -117,5 +117,6 @@ Some parameters are crucial to obtain promising results after 100 epochs:
 
 ### Model test
 To test saved DCKM model, set the *running_mode* parameter to '0', and rerun the *main.py*
-
+The experimential results from test set of the whole binay dataset from *6 open-source* projects.
+![alt text](https://raw.githubusercontent.com/tuanrpt/DCKM/master/results/scores-epochs.jpg)
 
