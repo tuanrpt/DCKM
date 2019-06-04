@@ -64,7 +64,9 @@ Each dataset folder contains two files: binaries-x-y.data (including functions c
 Ubuntu), and their corresponding labels, labels-x-y.data (where x is 32 or 64, y is windows or ubuntu).
 
 #### An example of content of binary files
-> **Note:** We use the special charactor '|' to distinguish *opcodes* from *instruction information*. For example, '131|131,196,8' has an opcode '131' and instruction information '131,196,8'. Additionally, the functions are separated by '-----'.   
+> **Note:** 
+>- The *opcodes* and the *instruction information* of machine instructions (see Section III-A) are converted from hexadecimal format to decimal format.
+>- We use the special charactor '|' to distinguish *opcodes* from *instruction information*. For example, '131|131,196,8' has an opcode '131' and instruction information '131,196,8'. Additionally, the functions are separated by '-----'.   
 ```
 ...
 -----
