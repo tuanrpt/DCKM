@@ -64,7 +64,7 @@ Each dataset folder contains two files: binaries-x-y.data (including functions c
 
 #### An example of content of binary files
 > **Note:** 
->- The *opcodes* and the *instruction information* of machine instructions (see Section III-A of the paper) are converted from hexadecimal format to decimal format.
+>- The *opcodes* and the *instruction information* of machine instructions (see the Section III-A of the paper) are converted from hexadecimal format to decimal format.
 >- We use the special charactor '|' to distinguish *opcodes* from *instruction information*. For example, '131|131,196,8' has an opcode '131' and instruction information '131,196,8'. Additionally, the functions are separated by '-----'.   
 ```
 ...
