@@ -92,7 +92,7 @@ Each dataset folder contains two files: binaries-x-y.data (including functions c
 > **Note:** label '0' and '1' represent for a non-vulnerable and vulnerable function respectively.
 
 ```
-0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ...
 ```
 
 ## Model implementation
