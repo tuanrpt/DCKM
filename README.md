@@ -26,7 +26,7 @@ The model is trained on two binary datasets, **NDSS18** and **6 open-source** wh
     <td>17,977</td>
   </tr>
   <tr align="center">
-    <td><b>Ubuntu</b></td>
+    <td><b>Linux</b></td>
     <td>6,955</td>
     <td>7,349</td>
     <td>14,304</td>
@@ -45,7 +45,7 @@ The model is trained on two binary datasets, **NDSS18** and **6 open-source** wh
     <td>26,949</td>
   </tr>
   <tr align="center">
-    <td><b>Ubuntu</b></td>
+    <td><b>Linux</b></td>
     <td>25,660</td>
     <td>290</td>
     <td>25,950</td>
