@@ -108,6 +108,7 @@ python main.py
 
 **Model parameters:**
 Please kindly look at the initial function of the *DCKM class* (in the main.py) for hyperparameter settings. 
+Run the default setting to obtain the best result of the experiment on the whole *6 open-source* dataset, which outperforms the baselines in all performance measures of interest including the cost-sensitive loss, F1 score, and AUC (see the last line in the Table III of the paper).  
 Some parameters are crucial to obtain promising results after 100 epoches: 
 - embedding_dimension: the dimension of the embedding process.
 - hidden_size: the nunmber of hidden units of the Bidirectional RNN.
