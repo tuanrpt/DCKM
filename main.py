@@ -13,7 +13,7 @@ class DCKM:
         self.running_mode = 1  # 0: test, 1: train
 
         self.dataset_name = '6_projects'  # 6_projects' or 'NDSS18'
-        self.data_size = 'full_dataset'  # 'windows_only' or 'ubuntu_only' or 'full_dataset'
+        self.data_size = 'full_dataset'  # 'windows_only' or 'linux_only' or 'full_dataset'
 
         self.datetime = utils._DATETIME
         tf.set_random_seed(utils._RANDOM_SEED)
@@ -527,13 +527,13 @@ def main():
     if model.running_mode == 1:  # train
         if model.data_size == 'full_dataset':
             print("Choosing full dataset ... \n")
-            list_arch_os = ['32-windows', '64-windows', '32-ubuntu', '64-ubuntu']
+            list_arch_os = ['32-windows', '64-windows', '32-linux', '64-linux']
         elif model.data_size == 'windows_only':
             print("Choosing data from windows ... \n")
             list_arch_os = ['32-windows', '64-windows']
-        elif model.data_size == 'ubuntu_only':
-            print("Choosing data from ubuntu ... \n")
-            list_arch_os = ['32-ubuntu', '64-ubuntu']
+        elif model.data_size == 'linux_only':
+            print("Choosing data from linux ... \n")
+            list_arch_os = ['32-linux', '64-linux']
 
         x_train_opcode, x_train_assembly, x_train_seq_len, y_train, \
         x_valid_opcode, x_valid_assembly, x_valid_seq_len, y_valid, \
@@ -545,7 +545,7 @@ def main():
                     x_valid_opcode, x_valid_assembly, x_valid_seq_len, y_valid)
     elif model.running_mode == 0:  # test
         if model.data_size == 'full_dataset':
-            list_arch_os = ['32-windows', '64-windows', '32-ubuntu', '64-ubuntu']
+            list_arch_os = ['32-windows', '64-windows', '32-linux', '64-linux']
         else:
             list_arch_os = ['32-windows']
 
