@@ -1,8 +1,8 @@
 # Deep Cost-sensitive Kernel Machine Model 
-This is an implementation of the Deep Cost-sensitive Kernel Machine (DCKM) model described in the **Deep Cost-sensitive Kernel Machine
+This is an implementation of the Deep Cost-sensitive Kernel Machine (DCKM) model as described in the **Deep Cost-sensitive Kernel Machine
 for Binary Software Vulnerability Detection** paper.
 
-DCKM model is a combination of a number of diverse techniques, including deep learning, kernel methods, and the new cost-sensitive based approach, aiming to detect efficiently potential vulnerabilities in binary software. 
+DCKM model is a combination of a number of diverse techniques, including deep learning, kernel methods, and the cost-sensitive based approach, aiming to detect efficiently potential vulnerabilities in binary software. 
 
 The overall structure of DCKM model consists of 3 primary elements: an embedding layer for vectorizing machine instructions, a Bidirectional Recurrent Neural Network capable of taking into account temporal information from a sequence of machine instructions, and a novel Cost-sensitive Kernel Machine invoked in the random feature space to predict the vulnerability with minimal cost-sensitive loss.
 
@@ -116,6 +116,6 @@ Some parameters are crucial to obtain promising results after 100 epochs:
 - num_random_features: the dimension for mapping *machine instruction* representations to random feature space. It depends on the data size, so it should be set either 512 or 1024, or even 2048 for larger datasets.
 
 ### Model test
-To test saved DCKM model, set the *running_mode* parameter to '0', and rerun the *main.py*
+To test saved DCKM model, set the *running_mode* parameter to '0', and rerun the *main.py*.
 
-
+The experimential results from test set of the whole binay dataset from the *6 open-source* projects.
