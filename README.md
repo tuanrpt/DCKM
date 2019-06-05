@@ -116,7 +116,4 @@ Some parameters are crucial to obtain promising results after 100 epochs:
 - num_random_features: the dimension for mapping *machine instruction* representations to random feature space. It depends on the data size, so it should be set either 512 or 1024, or even 2048 for larger datasets.
 
 ### Model test
-To test saved DCKM model, set the *running_mode* parameter to '0', and rerun the *main.py*.
-The experimental results of the test set of the whole *6 open-source* binay dataset.
-
-![alt text](https://raw.githubusercontent.com/tuanrpt/DCKM/master/results/scores-epochs.jpg)
+To test saved DCKM model, set the *running_mode* parameter to '0', and rerun the *main.py*. 
