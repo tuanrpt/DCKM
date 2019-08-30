@@ -1,6 +1,5 @@
 # Deep Cost-sensitive Kernel Machine Model 
-This is an implementation of the Deep Cost-sensitive Kernel Machine (DCKM) model as described in the **Deep Cost-sensitive Kernel Machine
-for Binary Software Vulnerability Detection** paper.
+This is an implementation of the Deep Cost-sensitive Kernel Machine (DCKM) model as described in the **Deep Cost-sensitive Kernel Machine for Binary Software Vulnerability Detection** paper.
 
 DCKM model is a combination of a number of diverse techniques, including deep learning, kernel methods, and the cost-sensitive based approach, aiming to detect efficiently potential vulnerabilities in binary software. 
 
@@ -64,7 +63,7 @@ Each dataset folder contains two files: binaries-x-y.data (including functions c
 
 #### An example of the content of binary files
 > **Note:** 
->- The *opcodes* and the *instruction information* of machine instructions (see the Section III-A of the paper) are converted from hexadecimal format to decimal format.
+>- The *opcodes* and the *instruction information* of machine instructions (see the Section "Data Processing and Embedding" of the paper) are converted from hexadecimal format to decimal format.
 >- We use the special charactor '|' to distinguish *opcodes* from *instruction information*. For example, '131|131,196,8' has an opcode '131' and instruction information '131,196,8'. Additionally, the functions are separated by '-----'.   
 ```
 ...
