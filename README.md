@@ -63,7 +63,7 @@ Each dataset folder contains two files: binaries-x-y.data (including functions c
 
 #### An example of the content of binary files
 > **Note:** 
->- To be easier in computing the frequency vector of instruction information for obtaining the *instruction information embedding* (see the Section "Data Processing and Embedding" of the paper), we converted machine instructions from hexadecimal format to decimal format before getting the *opcodes* and *instruction information*. After implementing this step, *instruction information* represent numbers from 0 to 255 to obtain a frequency vector with 256 dimensions.
+>- We convert machine instructions from hexadecimal format to decimal format. The *instruction information* after that will represent numbers from 0 to 255, which is easier in computing the frequency vector of instruction information for obtaining the *instruction information embedding* (see the Section "Data Processing and Embedding" of the paper).
 
 >- We use the special charactor '|' to distinguish *opcodes* from *instruction information*. For example, '131|131,196,8' has an opcode '131' and instruction information '131,196,8'. Additionally, the functions are separated by '-----'.   
 ```
