@@ -1,5 +1,5 @@
 # Deep Cost-sensitive Kernel Machine Model 
-This is an implementation of the Deep Cost-sensitive Kernel Machine (DCKM) model as described in the **Deep Cost-sensitive Kernel Machine for Binary Software Vulnerability Detection** paper.
+This is an implementation of the Deep Cost-sensitive Kernel Machine (DCKM) model as described in the [Deep Cost-sensitive Kernel Machine for Binary Software Vulnerability Detection](https://link.springer.com/chapter/10.1007/978-3-030-47436-2_13) which was accepted at PAKDD 2020.
 
 DCKM model is a combination of a number of diverse techniques, including deep learning, kernel methods, and the cost-sensitive based approach, aiming to detect efficiently potential vulnerabilities in binary software. 
 
